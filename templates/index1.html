@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <form action="/process" method="post">
+    <h1>Dojo Survey</h1>
+    <div class="name">
+      <label for="first-name">First Name:</label>
+      <input type="text" name="first-name" id="name">
+    </div>
+    <div class="name">
+      <label for="last-name">Last Name:</label>
+      <input type="text" name="last-name">
+    </div>
+    <div class="select-dojo-location">
+      <label for="dojollocation">Dojo Location:</label>
+      <select name="select-location" id="select-location">
+        <option value="Chicago">Chicago</option>
+        <option value="Seatle">Seattle</option>
+        <option value="Online">Online</option>
+      </select>
+    </div>
+    <div class="select-fav-language">
+      <label for="fav-language">Favorite Language:</label>
+      <select name="fav-language" id="fav-language">
+        <option value="Python">Python</option>
+        <option value="Java Script">Java script</option>
+        <option value="C Sharp">C#</option>
+        <option value="CSS">CSS</option>
+      </select>
+    </div>
+    <div class="comment-section">
+    <label for="comment">Comment(optional)</label>
+    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+    </div>
+
+  <!-- SENSEI BONUS: Include a set of checkboxes on your form -->
+    <p class="gender">Gender:</p>
+    <div class="male">
+      <input type="checkbox" name="check" value="male"  class="check">
+      <label for="check-box">Male</label>
+    </div>
+    <div class="female">
+      <input type="checkbox" name="check" value="female"class="check">
+      <label for="check-box">Female</label>
+    </div>
+
+    <!-- NINJA BONUS: Include a set of radio buttons on your form -->
+    <div class="radio">
+      <label for="Marital-Status">Marital Status:</label>
+      <input type="radio" id="1" name="status" value="married">
+      <label for="married">Married</label>
+      <input type="radio" id="2" name="status" value="single">
+      <label for="single">Single</label>
+      <input type="radio" id="3" name="status" value="divorced">
+      <label for="divorced">Divorced</label>
+    </div>
+    <button type="submit" id="submit">Submit</button>
+  </form>
+</body>
+</html>
